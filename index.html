@@ -2,17 +2,68 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>はじめてのBootstrap4</title>
+  <title>可愛い貯金</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+  <script src="bootstrap-4.3.1-dist/js/main.js"></script>
 
 </head>
 <body>
-
+  <center>
+    <h1>可愛い貯金</h1>
+  </center>
 
   <script type="text/javascript" src="bootstrap-4.3.1-dist/js/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
-hogehoge
+
+
+  <br>
+
+  <center>
+<h1><span class="money"></span>円</h1>
+  </center>
+
+  <br>
+
+<div class="container">
+      <div class="row">
+	<dev class="col-sm-3">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name0');" 
+		 // data-toggle="popover" data-content="購入ありがとうございます" title="thanks">
+	    <span class="name0"></span>
+	    <br>
+	    <span class="value0"></span>
+	  </button>
+	</dev>
+	
+	<dev class="col-sm-3">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name1');">
+	    <span class="name1"></span>
+	    <br>
+	    <span class="value1"></span>
+	    
+	  </button>
+	</dev>
+	<dev class="col-sm-3">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name2');">
+	    <span class="name2"></span>
+	    <br>
+	    <span class="value2"></span>
+	  </button>
+	</dev>
+	<dev class="col-sm-3">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name3');">
+	    <span class="name3"></span>
+	    <br>
+	    <span class="value3"></span>
+	    
+	  </button>
+      </div>
+      </div>	
+	</div>
+
+
+  
 </body>
 </html>
