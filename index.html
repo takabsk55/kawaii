@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>可愛い貯金</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>可愛い貯金</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="bootstrap-4.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.2.1-dist/js/snack.js"></script>
+ <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap.js"></script>
+  </head>
+  <body onload="init();">
+    
+    <center>
+      <h1>可愛い貯金</h1>
+      <br>
+      	   <h1> <span id="money"></span>円<h1>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
-  <script src="bootstrap-4.3.1-dist/js/main.js"></script>
-
-</head>
-<body>
-  <center>
-    <h1>可愛い貯金</h1>
-  </center>
-
-  <script type="text/javascript" src="bootstrap-4.3.1-dist/js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
-
-
-  <br>
-
-  <center>
-<h1><span class="money"></span>円</h1>
-  </center>
-
-  <br>
-
-<div class="container">
+      <br>
+    </center>
+    <div class="container">
       <div class="row">
 	<dev class="col-sm-3">
-	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name0');" 
-		 // data-toggle="popover" data-content="購入ありがとうございます" title="thanks">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('100');" 
+		  data-toggle="popover" data-content="購入ありがとうございます" title="thanks"> 
 	    <span class="name0"></span>
 	    <br>
 	    <span class="value0"></span>
@@ -38,7 +36,7 @@
 	</dev>
 	
 	<dev class="col-sm-3">
-	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name1');">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('500');">
 	    <span class="name1"></span>
 	    <br>
 	    <span class="value1"></span>
@@ -46,24 +44,42 @@
 	  </button>
 	</dev>
 	<dev class="col-sm-3">
-	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name2');">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('1000');">
 	    <span class="name2"></span>
 	    <br>
 	    <span class="value2"></span>
 	  </button>
 	</dev>
 	<dev class="col-sm-3">
-	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('name3');">
+	  <button type="button"  class="btn btn-primary btn-block" onclick="OnButtonClick('10000');">
 	    <span class="name3"></span>
 	    <br>
 	    <span class="value3"></span>
 	    
 	  </button>
       </div>
-      </div>	
+      </div>
+    <br>
+
+    
+     <div class="container">
+      <div class="row">
+	<div class="mx-auto">
+	  <button type="button"  class="btn btn-danger btn-block" onclick="OnButtonClick1('0');" 
+		 <h1> リセット</h1>
+		  <br>
+	  </button>
 	</div>
+	
 
+</div>
+</div>
 
-  
-</body>
+</div>
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+  </body>
 </html>

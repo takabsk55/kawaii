@@ -1,0 +1,52 @@
+var snackname={name0:"ブラックサンダー",name1:"じゃがりこ",name2:"カントリーマアム",name3:"一口チョコ",
+	       name4:"ばかうけ",name5:"ホームパイ",name6:"ぼんち揚",name7:"カスタードパイ",
+	       name8:"ココナッツサブレ",name9:"コアラのマーチ",name10:"ポテチ",name11:"源氏パイ",
+	       name12:"パイの実",name13:"その他",name14:"買ってきて"}
+var snackvalue={value0:20,value1:110,value2:15,value3:10,
+		value4:10,value5:20,value6:30,value7:30,
+	        value8:20,value9:15,value10:100,value11:20,
+		value12:15,value13:0,value14:0}
+
+function init(){
+    var nameElement=document.getElementsByTagName("span");
+    for (var i=0;i<nameElement.length;i++){
+	
+	var key1=nameElement[i].className
+	if(snackname[key1]){
+	    nameElement[i].innerText=snackname[key1];
+	}
+	var key2=nameElement[i].className
+	if(snackvalue[key2]){
+	    nameElement[i].innerText=snackvalue[key2];
+	}
+    }
+}
+
+
+function OnButtonClick(a){
+    
+    var url="https://hooks.slack.com/services/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";
+
+    var request = new XMLHttpRequest();
+
+    var datatemp=snackname[a];
+
+    var data='{"text":"'+datatemp+'"}';
+    request.open('POST', url);
+	request.onreadystatechange = function () {
+	    if (request.readyState != 4) {
+		// リクエスト中
+	    } else if (request.status != 200) {
+		// 失敗
+		//alert("bad");
+	    } else {
+		// 送信成功
+		// var result = request.responseText;
+	    }
+	};
+	request.send(data);
+    if(a==1){
+	alert("foo");
+    }
+    alert("購入ありがとうございます");
+}
